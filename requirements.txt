@@ -1,0 +1,7 @@
+asgiref
+certifi
+Django
+django-crispy-forms
+gunicorn
+sqlparse
+whitenoise
