@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+{% block content %}
+
+<main class="content">
+    <div class="container-fluid p-0">
+        <div class="row">
+            <div class="col-12 col-lg-12 col-xxl-12 d-flex">
+                <div class="card flex-fill">
+                    <div class="card-header">
+                        <div class="row">
+                            <div class="col-7">
+                                <h5 class="card-title mb-0">STUDENT FEES PAYMENT HISTORY</h5>
+                            </div>
+                            <div class="col-5">
+                                <form>
+                                    <div class="row">
+                                        <div class="col-8">
+                                            <div class="form-group">
+
+                                                <select class="form-control" id="exampleFormControlSelect1">
+                                                    <option>Mobile</option>
+                                                    <option>Bank</option>
+
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-4">
+                                            <div class="form-group">
+                                                <input type="button" class="form-control btn btn-primary"
+                                                    value="Filter">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <table class="table table-hover my-0">
+                        <thead>
+                            <tr>
+                                <th>Payment Ref.</th>
+                                <th>Amount</th>
+                                <th>Date Recorded</th>
+                                <th>Payment Method</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>35000</td>
+                                <td>2021-08-23</td>
+                                <td>Bank, National Bank</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>5000</td>
+                                <td>2022-03-23</td>
+                                <td>Bank, Equity Bank</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>30000</td>
+                                <td>2022-08-23</td>
+                                <td>Mobil, Safaricom Mpesa</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</main>
+
+
+{% endblock content %}

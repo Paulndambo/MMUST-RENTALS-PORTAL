@@ -1,0 +1,166 @@
+{% extends "base.html" %}
+{% block content %}
+
+<main class="content">
+    <div class="container-fluid p-0">
+        <div class="row">
+            <div class="col-12 col-lg-12 col-xxl-12 d-flex">
+                <div class="card flex-fill">
+                    <div class="card-header">
+                        <div class="row">
+                            <div class="col-7">
+                                <h5 class="card-title mb-0">HOSTELS/RENTALS LIST</h5>
+                            </div>
+                            <div class="col-5">
+                                <form>
+                                    <div class="row">
+                                        <div class="col-8">
+                                            <div class="form-group">
+
+                                                <select class="form-control" id="exampleFormControlSelect1">
+                                                    <option>Lurambi Hostels</option>
+                                                    <option>Milimani Hostels</option>
+                                                    <option>Kefinco Hostels</option>
+                                                    <option>Tea Zone Hostels</option>
+                                                    <option>Hall 4 Hostels</option>
+                                                    <option>Junction Hostels</option>
+                                                    <option>Sichirai Hostels</option>
+                                                    <option>Whitehouse Hostels</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-4">
+                                            <div class="form-group">
+                                                <input type="button" class="form-control btn btn-primary"
+                                                    value="Filter">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <table class="table table-hover my-0">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Units</th>
+                                <th>Unit Rent.</th>
+                                <th>Occupied</th>
+                                <th>Unocuppied</th>
+                                <th colspan="3">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Lurambi Hostels</td>
+                                <td>35</td>
+                                <td>3500</td>
+                                <td>29</td>
+                                <td>6</td>
+                                <td>
+                                    <a href="#" class="btn btn-sm btn-success">View</a>
+                                </td>
+                                <td>
+                                    <a href="#" class="btn btn-sm btn-primary">Edit</a>
+                                </td>
+                                <td>
+                                    <a href="#" class="btn btn-sm btn-danger">Delete</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Milimani Hostels</td>
+                                <td>56</td>
+                                <td>7500</td>
+                                <td>50</td>
+                                <td>6</td>
+                                <td>
+                                    <a href="#" class="btn btn-sm btn-success">View</a>
+                                </td>
+                                <td>
+                                    <a href="#" class="btn btn-sm btn-primary">Edit</a>
+                                </td>
+                                <td>
+                                    <a href="#" class="btn btn-sm btn-danger">Delete</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Kefinco Hostels</td>
+                                <td>30</td>
+                                <td>4500</td>
+                                <td>29</td>
+                                <td>1</td>
+                                <td>
+                                    <a href="#" class="btn btn-sm btn-success">View</a>
+                                </td>
+                                <td>
+                                    <a href="#" class="btn btn-sm btn-primary">Edit</a>
+                                </td>
+                                <td>
+                                    <a href="#" class="btn btn-sm btn-danger">Delete</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Sichirai Hostels</td>
+                                <td>350</td>
+                                <td>6500</td>
+                                <td>300</td>
+                                <td>50</td>
+                                <td>
+                                    <a href="#" class="btn btn-sm btn-success">View</a>
+                                </td>
+                                <td>
+                                    <a href="#" class="btn btn-sm btn-primary">Edit</a>
+                                </td>
+                                <td>
+                                    <a href="#" class="btn btn-sm btn-danger">Delete</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Junction Hostels</td>
+                                <td>35</td>
+                                <td>3000</td>
+                                <td>29</td>
+                                <td>6</td>
+                                <td>
+                                    <a href="#" class="btn btn-sm btn-success">View</a>
+                                </td>
+                                <td>
+                                    <a href="#" class="btn btn-sm btn-primary">Edit</a>
+                                </td>
+                                <td>
+                                    <a href="#" class="btn btn-sm btn-danger">Delete</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Tea Zone Hostels</td>
+                                <td>35</td>
+                                <td>3500</td>
+                                <td>29</td>
+                                <td>6</td>
+                                <td>
+                                    <a href="#" class="btn btn-sm btn-success">View</a>
+                                </td>
+                                <td>
+                                    <a href="#" class="btn btn-sm btn-primary">Edit</a>
+                                </td>
+                                <td>
+                                    <a href="#" class="btn btn-sm btn-danger">Delete</a>
+                                </td>
+                            </tr>
+                           
+                            
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</main>
+
+
+{% endblock content %}

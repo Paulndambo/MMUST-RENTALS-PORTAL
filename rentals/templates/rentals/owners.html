@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% block content %}
+
+<main class="content">
+    <div class="container-fluid p-0">
+        <div class="row">
+            <div class="col-12 col-lg-12 col-xxl-12 d-flex">
+                <div class="card flex-fill">
+                    <div class="card-header">
+                        <div class="row">
+                            <div class="col-6">
+                                <h5 class="card-title mb-0">HOSTELS/RENTALS OWNERS LIST</h5>
+                            </div>
+                            <div class="col-3">
+                                <a href="{% url 'owner' %}" class="btn btn-primary">Add Owner</a>
+                            </div>
+                            <div class="col-3">
+                                <form method="POST">
+                                    {% csrf_token %}
+                                    <div class="row">
+                                            <div class="form-group">
+                                                <input type="text" name="email" id="email" placeholder="Search Email" class="form-control">
+                                            </div>
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <table class="table table-hover my-0">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Phone Number</th>
+                                <th>Date Created</th>
+                                <th colspan="3">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for owner in owners %}
+                            <tr>
+                                <td>{{owner.name}}</td>
+                                <td>{{owner.email}}</td>
+                                <td>{{owner.phone_number}}</td>
+                                <td>{{owner.date_created.date}}</td>
+                                <td>
+                                    <a href="{% url 'owner-details' owner.pk %}" class="btn btn-sm btn-success">View</a>
+                                </td>
+                                <td>
+                                    <a href="{% url 'edit-owner' owner.pk %}" class="btn btn-sm btn-primary">Edit</a>
+                                </td>
+                                <td>
+                                    <a href="#" class="btn btn-sm btn-danger">Delete</a>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</main>
+
+
+{% endblock content %}
