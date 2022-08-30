@@ -34,6 +34,7 @@ STATUS_CHOICES = (
 )
 
 class Student(models.Model):
+    rental = models.ForeignKey(Rental, on_delete=models.SET_NULL, null=True)
     name = models.CharField(max_length=255)
     reg_number = models.CharField(max_length=255, unique=True)
     id_number = models.CharField(max_length=25)

@@ -14,3 +14,5 @@ admin.site.register(Owner, OwnerAdmin)
 
 class StudentAdmin(admin.ModelAdmin):
     list_display = ["name", "email", "phone_number", "date_created", "date_updated"]
+
+admin.site.register(Student, StudentAdmin)

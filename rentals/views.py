@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
-from .models import Owner, Rental
+from .models import Owner, Rental, Student
 from .forms import OwnerForm
 from django.views.generic import CreateView, UpdateView, DeleteView, DetailView
 from django.db.models import Q
@@ -25,8 +25,10 @@ def hostel_owners(request):
 
 def hostel_details(request, pk):
     hostel = Rental.objects.get(pk=pk)
+    students = Student.objects.filter(rental=hostel)
     context = {
-        'hostel': hostel
+        'hostel': hostel,
+        'students': students,
     }
     return render(request, "rentals/hostel_details.html", context)
 
