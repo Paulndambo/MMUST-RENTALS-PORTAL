@@ -23,6 +23,13 @@ def hostel_owners(request):
     return render(request, 'rentals/owners.html', {"owners": owners})
 
 
+def hostel_details(request, pk):
+    hostel = Rental.objects.get(pk=pk)
+    context = {
+        'hostel': hostel
+    }
+    return render(request, "rentals/hostel_details.html", context)
+
 class CreateOwner(CreateView):
     model = Owner
     form_class = OwnerForm
@@ -40,7 +47,15 @@ class OwnerDetails(DetailView):
 
 @login_required(login_url="/accounts/login")
 def hostels(request):
-    return render(request, 'rentals/hostels.html')
+    if request.method == "POST":
+        search = request.POST.get('search')
+        hostels = Rental.objects.filter(Q(name__icontains=search))
+    else:
+        hostels = Rental.objects.all()
+    context = {
+        "hostels": hostels
+    }
+    return render(request, 'rentals/hostels.html', context)
 
 
 @login_required(login_url="/accounts/login")
